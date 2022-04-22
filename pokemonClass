@@ -1,0 +1,74 @@
+
+var div=document.getElementById("contenedorPokemon");
+var pokedex=document.getElementById("btnpokedex");
+pokedex.addEventListener("click",misPokemones);
+
+var namePoke=document.getElementById("nombre");
+var li=document.getElementById("tipo");
+li.style.display="none";
+var li2=document.getElementById("ataque");
+li2.style.display="none";
+var li3=document.getElementById("velocidad");
+li3.style.display="none";
+var li4=document.getElementById("afinidad");
+li4.style.display="none";
+
+class Pokemon{
+    
+    constructor(nombre,tipo,foto){
+        this.foto=new Image();
+        this.foto2=new Image();
+        this.nombre=nombre;
+        this.tipo=tipo;
+        this.ataque=Math.floor(Math.random()*(90-30+1))+30;
+        this.velocidad=Math.floor(Math.random()*(90-30+1))+30;
+        this.afinidad=Math.floor(Math.random()*(90-30+1))+30;
+        this.foto.src=foto;
+        this.foto2.src=foto;
+    }
+    getFoto(){
+        return this.foto;
+    }
+    getNombre(){
+        return this.nombre;
+    }
+    cambiarAtributos(){
+        this.ataque=Math.floor(Math.random()*(90-30+1))+30;
+        this.velocidad=Math.floor(Math.random()*(90-30+1))+30;
+        this.afinidad=Math.floor(Math.random()*(90-30+1))+30;
+    }
+    mostrar(){
+        while (div.firstChild) {
+            div.removeChild(div.firstChild);
+        }
+        var namePoke=document.getElementById("capturado");
+        namePoke.innerText="¡¡ CAPTURADO !!";
+        var namePoke=document.getElementById("nombre");
+        var li=document.getElementById("tipo");
+        li.style.display="";
+        var li2=document.getElementById("ataque");
+        li2.style.display="";
+        var li3=document.getElementById("velocidad");
+        li3.style.display="";
+        var li4=document.getElementById("afinidad");
+        li4.style.display="";
+
+        namePoke.innerText=this.nombre;
+        
+        div.appendChild(this.foto);
+        
+        li.innerText= "TIPO:      "+this.tipo;
+        li2.innerText="ATAQUE:    "+this.ataque;
+        li3.innerText="VELOCIDAD: "+this.velocidad;
+        li4.innerText="SALUD:  "+this.afinidad;
+
+        //document.body.appendChild(this.foto);
+    }
+
+    mostrarMisPokes(){
+        this.foto.style="width:100px;height:100px;position:relative;   display: block; margin: 0 auto; background:#FF0000;";
+        document.write("<center> <br /><strong>" + this.nombre + "</strong><br /> <br /><strong> Velocidad: " + this.velocidad + "</strong><br /> <br /><strong> Ataque:"+ this.ataque +"</strong><br /> <br /><strong> Salud:"+ this.ataque +"</strong><br /> </center>");
+        document.body.appendChild(this.foto);
+        document.write("<hr/>");
+    }
+}

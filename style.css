@@ -1,0 +1,160 @@
+body{
+    background-color: black;
+}
+@keyframes codebeauty {
+    0%{
+    top: -500px;
+    }
+    50% {
+    top: 0px;
+    }
+    75%{
+    top: -30px;
+    }
+    100%{
+    top: 0px;
+    }
+}
+@keyframes spin {
+    0%{
+    transform: rotatez (0deg);
+    }
+    50% {
+    transform: rotatez (360deg);
+    }
+    100%{
+    transform: rotatez(0deg);
+    }
+}
+
+@keyframes abajo {
+    0%{
+    top: -500px;
+    }
+    50% {
+    top: 0px;
+    }
+    75%{
+    top: -30px;
+    }
+    100%{
+    top: 0px;
+    }
+}
+@keyframes rodar {
+    0%{
+    transform: rotatez (0deg);
+    }
+    50%{
+        transform: rotatez(360deg);
+        }   
+    100%{
+    transform: rotatez(0deg);
+    }
+}
+.pokebola{
+    position: relative;
+    width: 50rem;
+    height: 50rem;
+    background: #FFF;
+    border-radius: 50%;
+    animation: abajo .25s ease-in-out,
+    rodar 3s  ease-in-out 3;
+    }
+.pokebola::before{
+    content: '';
+    width: 50rem;
+    height: 25rem;
+    background: #FF1C1C;
+    border-radius: 25rem 25rem 0 0;
+    position: absolute;
+    animation: codebeauty .25s ease-in-out,
+    spin 3s  ease-in-out 3;
+}
+
+
+
+.detalle{
+    width: 50rem;
+    height: 0.5rem;
+    background: #333;
+    margin-top: 24.5rem;
+    position: absolute;
+    animation: codebeauty .40s ease-in,
+    spin 5s  ease-in 5;
+    }
+.detalle::before{
+    content: '';
+    width: 10rem;
+    height: 10rem;
+} 
+
+.detalle::after{
+    content: '';
+    width: 1.8rem;
+    height: 1.8rem;
+    background: #FFF;
+    border-radius: 50%;
+    margin-top: -0.5rem;
+    margin-left: 4.1rem;
+
+}
+
+.boton{
+    content: '';
+    width: 10rem;
+    height: 10rem;
+    background: #333;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: -6rem;
+    margin-left: 19rem;
+}
+.boton:hover{
+    background: yellow;
+}
+
+.pokemon{
+    position: relative;
+    width: fit-content/2;
+    height: fit-content/2;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+h4{
+font-size: 80px;  
+margin-bottom: 40px;  
+}
+
+.card{
+    margin: auto;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 0 20px cyan;
+    border-radius: 20px;
+    padding: 10px 0;
+    background-color: var(--colorCard);
+}
+
+.card2{
+    margin: auto;
+    width: 400px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 20px cyan;
+    border-radius: 20px;
+    padding: 10px 0;
+
+    background-color: var(--colorCard);
+}
+.abajo{
+    position: fixed;
+    margin: auto,auto,auto,auto;
+    }
+
+h5{
+    font-size: 80px;  
+    margin-bottom: 40px;  
+}
