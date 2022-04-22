@@ -63,7 +63,7 @@ body{
     }
 .pokebola::before{
     content: '';
-    width: 50rem;
+    width: 44.5rem;
     height: 25rem;
     background: #FF1C1C;
     border-radius: 25rem 25rem 0 0;
@@ -75,7 +75,7 @@ body{
 
 
 .detalle{
-    width: 50rem;
+    width: 44.5rem;
     height: 0.5rem;
     background: #333;
     margin-top: 24.5rem;
